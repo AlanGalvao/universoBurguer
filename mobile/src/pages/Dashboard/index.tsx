@@ -5,6 +5,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { ListaParamsPilha } from '../../routes/app.routes'
 import { api } from '../../services/api';
 import { AuthProvider, AuthContext } from '../../contexts/AuthContext';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 
@@ -58,8 +59,8 @@ export default function Dashboard() {
             <TouchableOpacity style={styles.button} onPress={openOrder}>
                 <Text style={styles.buttonText}>Abrir mesa</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={signOut}>
-                <Text style={styles.buttonText}>Sair</Text>
+            <TouchableOpacity style={styles.saida} onPress={signOut}>
+                <MaterialCommunityIcons name="exit-run" size={50} color="white" />
             </TouchableOpacity>
 
         </SafeAreaView>
@@ -104,5 +105,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#101026',
         fontWeight: 'bold'
+    },
+    saida:{
+        marginTop: 150
     }
 })
