@@ -4,7 +4,7 @@ import { router } from "./route";
 import cors from 'cors';
 import path from 'path';
 
-const PORT = process.env.PORT || 5000
+const PORT = 5000
 const app = express(); //instanciando o express na variavel app
 app.use(express.json()); //inofrmando para o app que o formato do express é o json
 app.use(cors()); 
