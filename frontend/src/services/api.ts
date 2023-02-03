@@ -7,7 +7,7 @@ export function setupAPIClient(ctx = undefined) {
     let cookies = parseCookies(ctx);
 
     const api = axios.create({
-        baseURL:'https://universo-burguer-backend.vercel.app',
+        baseURL:'https://guarded-dawn-12858.herokuapp.com:5000',
         headers:{
             Authorization: `Bearer ${cookies[`@universoBurguer.token`]}`
         }
