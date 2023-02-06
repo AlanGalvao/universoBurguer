@@ -34,5 +34,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-app.listen(PORT, () => console.log('Servidor online!!!!!!')) //"escutando a porta informada"
+//app.listen(PORT, () => console.log('Servidor online!!!!!!')) //"escutando a porta informada"
 //app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
