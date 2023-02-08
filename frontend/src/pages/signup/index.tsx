@@ -23,22 +23,26 @@ export default function SignUp() {
     async function handleSignUp(event: FormEvent){
         event.preventDefault();
 
-        if (name === "" || email === "" || password === "") {
-            toast.error("PREENCHA TODOS OS CAMPOS!")
-            return;
+        try {
+            if (name === "" || email === "" || password === "") {
+                toast.error("PREENCHA TODOS OS CAMPOS!")
+                return;
+            }
+    
+            setLoading(true);
+    
+            let data = {
+                name,
+                email,
+                password
+            }
+    
+            await signUp(data);
+    
+            setLoading(false)
+        } catch (err) {
+            console.log(err)
         }
-
-        setLoading(true);
-
-        let data = {
-            name,
-            email,
-            password
-        }
-
-        await signUp(data);
-
-        setLoading(false)
     }
 
     return (
