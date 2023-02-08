@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node-dev --transpile-only src/server.ts",
-    "dev": "ts-node-dev --transpile-only src/server.ts"
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "build": "react-scripts build"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",

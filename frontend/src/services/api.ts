@@ -7,7 +7,7 @@ export function setupAPIClient(ctx = undefined) {
     let cookies = parseCookies(ctx);
 
     const api = axios.create({
-        baseURL:'https://universoburguer.azurewebsites.net:454',
+        baseURL:'https://universoburguer.azurewebsites.net',
         headers:{
             Authorization: `Bearer ${cookies[`@universoBurguer.token`]}`
         }
