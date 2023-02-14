@@ -4,7 +4,7 @@ import { router } from "./route";
 import cors from 'cors';
 import path from 'path';
 
-const PORT = 454
+//const PORT = 3333
 const app = express(); //instanciando o express na variavel app
 app.use(express.json()); //inofrmando para o app que o formato do express é o json
 app.use(cors()); 
@@ -34,5 +34,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-// app.listen(PORT, () => console.log('Servidor online!!!!!!')) //"escutando a porta informada"
+app.listen(3333, () => console.log('Servidor online!!!!!!')) //"escutando a porta informada"
 //app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
